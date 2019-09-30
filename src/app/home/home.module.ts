@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
 import { MeteoComponent } from './meteo/meteo.component';
+import { NewsComponent } from './news/news.component';
 
 @NgModule({
   imports: [
@@ -19,6 +20,6 @@ import { MeteoComponent } from './meteo/meteo.component';
       }
     ])
   ],
-  declarations: [HomePage, MeteoComponent]
+  declarations: [HomePage, MeteoComponent, NewsComponent]
 })
 export class HomePageModule {}

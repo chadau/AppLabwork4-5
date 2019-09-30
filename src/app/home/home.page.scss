@@ -6,12 +6,17 @@ ion-content{
 
 ion-title{
 
-    color: rgb(96, 172, 243);
+    /* color: rgb(96, 172, 243);  */
+    color: white;
     text-align: center;
     font-family: verdana;
     font-weight: bold;
     font-size: 150%;
     text-shadow: 1px 1px 1px silver;
-    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-  
+  /*  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;*/
+    
+}
+
+ion-toolbar{
+    --background: rgb(60, 167, 255);
 }
