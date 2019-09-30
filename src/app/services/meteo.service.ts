@@ -21,6 +21,6 @@ private readonly baseUrl: string = 'https://api.openweathermap.org/data/2.5/weat
     params = params.append('units', units);
     params = params.append('appid', this.apiKey);
     return this.httpClient
-    .get(this.baseUrl, {params: params}).pipe(map(response => new Meteo().deserialize(response)));
+    .get(this.baseUrl, {params}).pipe(map(response => new Meteo().deserialize(response)));
   }
 }
