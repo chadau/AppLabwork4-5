@@ -1,4 +1,6 @@
+import { MeteoService } from './../../services/meteo.service';
 import { Component, OnInit } from '@angular/core';
+import { Meteo } from 'src/app/models/meteo';
 
 @Component({
   selector: 'app-meteo',
@@ -7,8 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MeteoComponent implements OnInit {
 
-  constructor() { }
+  private meteo: Meteo;
 
-  ngOnInit() {}
+  constructor(private meteoService: MeteoService) { }
 
+  ngOnInit() {
+    this.meteoService.getMeteo('helsinki', 'fi').subscribe(
+      data => {
+        this.meteo = data;
+        console.log('data', this.meteo);
+      },
+      error => {
+        console.log('error', error);
+      }
+    );
+  }
 }
