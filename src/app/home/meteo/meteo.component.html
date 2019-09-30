@@ -1,6 +1,11 @@
 
 <ion-card>
   <ion-card-content>
-    <ion-button>Click</ion-button>
+   
+<h1>  {{meteo.city}} </h1>
+<h1>  {{meteo.temperature | number: '1.0-0'}}  ºC</h1>
+<h1>  Humidity: {{meteo.humidity}} %</h1>
+<h1>  Wind: {{meteo.windSpeed}} m/s</h1>
+
   </ion-card-content>
 </ion-card>

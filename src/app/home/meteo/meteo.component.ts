@@ -9,9 +9,11 @@ import { Meteo } from 'src/app/models/meteo';
 })
 export class MeteoComponent implements OnInit {
 
-  private meteo: Meteo;
+  public meteo: Meteo;
 
-  constructor(private meteoService: MeteoService) { }
+  constructor(private meteoService: MeteoService) { 
+    this.meteo = new Meteo();
+  }
 
   ngOnInit() {
     this.meteoService.getMeteo('helsinki', 'fi').subscribe(

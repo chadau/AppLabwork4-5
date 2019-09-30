@@ -1,5 +1,5 @@
 export class Meteo {
-    city: string;
+    public city: string;
     temperature: number;
     humidity: number;
     windSpeed: number;
