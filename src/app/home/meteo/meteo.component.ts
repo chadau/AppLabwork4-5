@@ -1,6 +1,6 @@
 import { MeteoService } from './../../services/meteo.service';
 import { Component, OnInit } from '@angular/core';
-import { Meteo } from 'src/app/models/meteo';
+import { Meteo } from '../../models/meteo';
 
 @Component({
   selector: 'app-meteo',
