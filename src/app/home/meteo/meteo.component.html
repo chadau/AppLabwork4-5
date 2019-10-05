@@ -2,10 +2,37 @@
 <ion-card>
   <ion-card-content>
    
-<h1>  {{meteo.city}} </h1>
-<h1>  {{meteo.temperature | number: '1.0-0'}}  ºC</h1>
-<h1>  Humidity: {{meteo.humidity}} %</h1>
-<h1>  Wind: {{meteo.windSpeed}} m/s</h1>
+<ion-grid>
+  <ion-row> 
+    <ion-col>
+      <h1>  {{meteo.temperature | number: '1.0-0'}}  ºC</h1>
+    </ion-col>
+    <ion-col>
+    </ion-col>
+    <ion-col ><h2> widget</h2></ion-col>
+  </ion-row>
+</ion-grid>
+
+
+
+  
+
+
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <h1>  {{meteo.city}} </h1>
+    </ion-col>
+    <ion-col>
+      <h2>  Humidity: {{meteo.humidity}} % </h2>
+    </ion-col>
+    <ion-col>
+      <h2>  Wind: {{meteo.windSpeed}} m/s</h2>
+    </ion-col>
+  
+  </ion-row>
+  </ion-grid>
+
 
   </ion-card-content>
 </ion-card>
