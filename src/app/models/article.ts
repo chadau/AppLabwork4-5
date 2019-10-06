@@ -17,11 +17,12 @@ export class Article {
         this.title = input.articles[this.i].title;
         this.description = input.articles[this.i].description;
         return this; */
-
-        this.author = input.articles[0].author;
-        this.title = input.articles[0].title;
-        this.description = input.articles[0].description;
-        this.image = input.articles[0].urlToImage;
+        for (let i = 0; i < 15; i++)
+        {
+        console.log(this.author = input.articles[i].author);
+        console.log(this.title = input.articles[i].title);
+        console.log(this.description = input.articles[i].description);
+        console.log(this.image = input.articles[i].urlToImage); }
 
         this.author2 = input.articles[1].author;
         this.title2 = input.articles[1].title;

@@ -1,39 +1,18 @@
 <ion-card>
   <ion-card-content>
-
-    <ion-grid>
+      <ion-grid>
       <ion-row>
-        <ion-col>
-          <h1> {{meteo.temperature | number: '1.0-0'}} ºC</h1>
-        </ion-col>
-        <ion-col>
-        </ion-col>
-        <ion-col>
-          <img src='{{meteo.icon}}' alt="icon-meteo">
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+              <ion-col size-sm="2"> <img  src='{{meteo.icon}}' alt="icon-meteo" ></ion-col>
+              <ion-col size-sm="2">  </ion-col>
+     </ion-row>
+     </ion-grid>
 
-
-
-
-
-
-    <ion-grid>
+      <ion-grid>
       <ion-row>
-        <ion-col>
-          <h1> {{meteo.city}} </h1>
-        </ion-col>
-        <ion-col>
-          <h2> Humidity: {{meteo.humidity}} % </h2>
-        </ion-col>
-        <ion-col>
-          <h2> Wind: {{meteo.windSpeed}} m/s</h2>
-        </ion-col>
-
-      </ion-row>
-    </ion-grid>
-
-
+        <ion-col size-sm="2"><h1 class="ion-text-center"> {{meteo.city}} </h1><h1 class="ion-text-center"> {{meteo.temperature | number: '1.0-0'}} ºC</h1></ion-col>     
+        <ion-col><h2 class="ion-text-center"> Humidity: {{meteo.humidity}} % </h2></ion-col>
+        <ion-col><h2 class="ion-text-center"> Wind: {{meteo.windSpeed}} m/s</h2></ion-col>       
+      </ion-row>      
+      </ion-grid>
   </ion-card-content>
 </ion-card>
