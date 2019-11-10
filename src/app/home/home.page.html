@@ -1,17 +1,23 @@
 <ion-header>
   <ion-toolbar>
+    <ion-grid>
+      <ion-row>
     <ion-title>
       NEWS
     </ion-title>
+    <ion-button [routerLink]="['/search']" [routerDirection]='forward'>
+    <ion-icon name="search" size="large" id="search"></ion-icon>
+  </ion-button>
+  </ion-row>
+  </ion-grid>
   </ion-toolbar>
 </ion-header>
 
 
 <ion-content>
     
-<app-meteo> </app-meteo> 
-
-<app-news>  </app-news>
+<app-meteo></app-meteo> 
+<app-news></app-news>
 
     
 

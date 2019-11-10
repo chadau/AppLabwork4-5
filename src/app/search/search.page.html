@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-searchbar [(ngModel)]="searchText" (ionChange)="change(searchText)"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list inset *ngFor="let article of Articles">
+      <ion-card>
+          <ion-card-content>
+            <div class ="article">
+            <img src={{article.image}}>
+            <h1>  {{article.title}}</h1>
+            <p>  {{article.description}}</p> <br>
+            <p>  {{article.author}} </p>
+          </div>
+          </ion-card-content>
+        </ion-card>
+  </ion-list>
+</ion-content>

@@ -1,8 +1,10 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, from} from 'rxjs';
 import { Article } from '../models/article';
-import { map } from 'rxjs/operators';
+import { map, switchMap } from 'rxjs/operators';
+import { ReplaceSource } from 'webpack-sources';
+import { stringify } from 'querystring';
 
 @Injectable({
   providedIn: 'root'
@@ -20,6 +22,18 @@ export class NewsService {
     params = params.append('country', countryCode);
     params = params.append('apiKey', this.apiKey);
     return this.http
-    .get(this.baseUrl, {params}).pipe(map(response => new Article().deserialize(response)));
+    .get(this.baseUrl, {params}).pipe(map((response: any) => new Article().deserialize(response.articles[0])));
   }
+
+  searchNews(query: string): Observable<Article[]> {
+    let params = new HttpParams();
+
+    params = params.append('q', query);
+    params = params.append('apiKey', this.apiKey);
+
+    return this.http.get(this.baseUrl, { params }).pipe(
+      map((articles: any) => { return articles.articles
+      .map((article: Object) => new Article().deserialize(article)); }
+    ));
+  };
 }
